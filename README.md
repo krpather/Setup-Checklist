@@ -1,13 +1,17 @@
-# Church Weekly Setup Checklist
+# Setup History Upgrade
 
-Static mobile-first checklist for Sound, Stream, Lighting and Stage. Supports multiple roles per person and dynamically adds shared duties.
+Manual Setup Lead URL:
 
-## Deploy
-1. Create a GitHub repository and upload `index.html`, `style.css`, and `app.js`.
-2. Enable GitHub Pages from the main branch/root.
-3. In Google Apps Script create a project, paste `apps-script.gs`, then Deploy > New deployment > Web app.
-4. Execute as: Me. Who has access: Anyone.
-5. Copy the Web App URL and paste it into `ENDPOINT` at the top of `app.js`.
-6. Commit the change. Submissions will write to the Google Sheet's `Web Submissions` tab.
+`https://krpather.github.io/Setup-Checklist/history.html`
 
-The Setup Lead verification view is the next phase; the Sheet already reserves verification fields.
+## Install
+1. In Apps Script, replace current `Code.gs` with this package's `Code.gs`.
+2. Deploy > Manage deployments > Edit > New version > Deploy.
+3. Keep Execute as: Me and Who has access: Anyone.
+4. In GitHub repo `krpather/Setup-Checklist`, add `history.html` and `history.js`.
+5. Append `style-additions.css` to the bottom of the existing `style.css`.
+6. Wait for GitHub Pages to redeploy, then open `/history.html`.
+
+The history page groups submissions by month and setup date, shows people/roles/completion/issues, expands each saved raw checklist, and lets Keanan verify the full setup date with lead notes.
+
+The Apps Script automatically extends `Web Submissions` with `Verified By` and `Lead Notes` columns while preserving existing data.
